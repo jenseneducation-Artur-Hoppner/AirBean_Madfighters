@@ -3,6 +3,8 @@
     <div id="nav">
     </div>
     <!-- <router-link to="/OrderStatus"> Order Status </router-link> -->
+
+  
     <router-view/>
   </div>
 </template>

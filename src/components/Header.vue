@@ -1,18 +1,13 @@
 <template>
-<div>
-    <p></p>
-</div>
-
+  <header></header>
 </template>
 
 <script>
-
 export default {
-
+name: "Header"
 }
-
 </script>
 
-<style lang='scss'>
+<style>
 
 </style>
