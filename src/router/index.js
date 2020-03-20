@@ -5,6 +5,10 @@ import Menu from '../views/Menu.vue'
 import About from '../views/About.vue'
 import Cart from '../views/Cart.vue'
 import OrderStatus from '../views/OrderStatus.vue'
+import OurCoffee from '../views/OurCoffee.vue'
+
+
+
 
 Vue.use(VueRouter)
 
@@ -33,6 +37,11 @@ const routes = [
   path: '/OrderStatus',
   name: 'OrderStatus',
   component: OrderStatus
+},
+{
+  path: '/OurCoffee',
+  name: 'OurCoffee',
+  component: OurCoffee
 }
 ]
 
@@ -43,3 +52,5 @@ const router = new VueRouter({
 })
 
 export default router
+
+
