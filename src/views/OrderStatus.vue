@@ -1,7 +1,7 @@
 <template>
 <main class="wrapper">
     <p id="order">Ordernummer <span style="font-weight:700;">#12DV23F</span></p>
-    <img src="graphics/drone.svg" alt="drone">
+    <img src="../assets/graphics/drone.svg" alt="drone">
     <h1>Din beställning är på väg!</h1>
     <p id="ETA">13 minuter</p>
     <button class="btn">Ok, cool!</button>
