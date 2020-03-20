@@ -4,6 +4,7 @@ import Start from '../views/Start.vue'
 import Menu from '../views/Menu.vue'
 import About from '../views/About.vue'
 import Cart from '../views/Cart.vue'
+import OrderStatus from '../views/OrderStatus.vue'
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,11 @@ const routes = [
     name: 'Cart',
     component: Cart
   },
+  {
+  path: '/OrderStatus',
+  name: 'OrderStatus',
+  component: OrderStatus
+}
 ]
 
 const router = new VueRouter({
