@@ -3,6 +3,9 @@
               <!-- <header>
             <nav><i class="fa fa-bars"></i>  </nav>
         </header> -->
+
+
+        <Header />
         <article>
             <h1> Vårt kaffe </h1>
             <h2 class="sub-heading">Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper, crema, strong whipped, variety extra iced id lungo half and half mazagran. Pumpkin spice.
@@ -22,7 +25,15 @@
 </template>
 
 <script>
+
+import Header from '../components/Header';
 export default {
+    name: 'OurCoffee',
+  components: {
+  
+    Header
+   
+  },
 
 }
 </script>
