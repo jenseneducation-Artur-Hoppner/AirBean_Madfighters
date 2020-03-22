@@ -37,7 +37,6 @@ header {
             width:30px;
         }
 
-        
         .btn-nav {
             font-size: 4.42em;
             font-weight: 300;
@@ -51,10 +50,8 @@ header {
             transition: all 0.4s ease-in-out;
             border:none;
             /* margin: 2% 0% 0% 0%; */
-            
         }
 
-               
         .btn-bag {
             font-size: 4.42em;
             font-weight: 300;

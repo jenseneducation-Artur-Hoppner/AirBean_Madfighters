@@ -20,18 +20,23 @@
      <h3>Eva Cortado</h3>
      <p>VD &amp; Grundare</p>
 </section>
-<footer></footer>
+
+<Footer />
+
     </div>
 </template>
 
 <script>
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 export default {
     name: 'OurCoffee',
   components: {
   
-    Header
+    Header,
+    Footer
    
   },
 
@@ -76,6 +81,8 @@ p {
 :root {
     background: #F3E4E1;
 }
+
+
 .wrapper {
     background: #F3E4E1;
     height:100vh;
@@ -84,8 +91,7 @@ p {
 
 
 article {
-    
-    padding: 4%;
+  padding: 0 2% 0 2%;
 }
 
 article p {
@@ -99,15 +105,25 @@ p {
 
 .center {
     text-align: center;
+    background: #F3E4E1;
 }
 
-footer {
-    background-image: url("../assets/graphics/graphics-footer.svg");
-    background-repeat: no-repeat;
-    width: 1000px;
-    background-position: center;
-    height: 20vh;
+/* FOOTER  */
+/* footer {
+    
+    background-color: #F3E4E1;
 }
+
+#bg {
+        background: url('../assets/graphics/graphics-footer.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-size: cover;
+        height: 20vh;
+        width: 100%;
+        background-color: #F3E4E1;     
+} */
 
 /* annat */
 
