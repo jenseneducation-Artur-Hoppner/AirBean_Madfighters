@@ -95,4 +95,5 @@ font-family:' Playfair Display';
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
+
 </style>
