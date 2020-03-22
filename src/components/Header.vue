@@ -1,7 +1,7 @@
 <template>
    <header>
-          <div class="column"><nav class="btn-nav"><img id="nav-sign" src="icons/open-menu.svg" alt=""></nav></div> 
-          <div class="column right-col"> <nav class="btn-bag"><img id="bag-sign" src="graphics/bag.svg" alt=""></nav></div>
+          <div class="column"><nav class="btn-nav"><img id="nav-sign" src="../assets/graphics/open-menu.svg" alt=""></nav></div> 
+          <div class="column right-col"> <nav class="btn-bag"><img id="bag-sign" src="../assets/graphics/bag.svg" alt=""></nav></div>
   </header>
 </template>
 
