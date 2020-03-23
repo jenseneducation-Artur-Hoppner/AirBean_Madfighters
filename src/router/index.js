@@ -1,31 +1,18 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-<<<<<<< HEAD
-import Menu from '../views/Menu.vue'
-=======
-import Start from '../views/Start.vue'
 import Menu from '../views/Menu.vue'
 import About from '../views/About.vue'
-import Cart from '../views/Cart.vue'
 import OrderStatus from '../views/OrderStatus.vue'
 import OurCoffee from '../views/OurCoffee.vue'
-
-
-
->>>>>>> 32725f933aa08bf963b40d06e6a733b3ecf29622
+import Cart from '../views/Cart.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-<<<<<<< HEAD
     name: 'Menu',
     component: Menu
-=======
-    name: 'Start',
-    component: Start
->>>>>>> 32725f933aa08bf963b40d06e6a733b3ecf29622
   },
   {
     path: '/Menu',
