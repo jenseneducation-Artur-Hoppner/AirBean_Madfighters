@@ -73,12 +73,13 @@ h3 {
 p {
     font-family: 'fira sans';
     font-size: 1em;
-    margin: 16px 0;
+    padding: 16px 0;
 }
 
 /* Layout */
 
-:root {
+
+:root, html, section, article {
     background: #F3E4E1;
 }
 
