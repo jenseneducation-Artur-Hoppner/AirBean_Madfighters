@@ -3,6 +3,9 @@
               <!-- <header>
             <nav><i class="fa fa-bars"></i>  </nav>
         </header> -->
+
+
+        <Header />
         <article>
             <h1> Vårt kaffe </h1>
             <h2 class="sub-heading">Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio, grounds dripper, crema, strong whipped, variety extra iced id lungo half and half mazagran. Pumpkin spice.
@@ -17,12 +20,25 @@
      <h3>Eva Cortado</h3>
      <p>VD &amp; Grundare</p>
 </section>
-<footer></footer>
+
+<Footer />
+
     </div>
 </template>
 
 <script>
+
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 export default {
+    name: 'OurCoffee',
+  components: {
+  
+    Header,
+    Footer
+   
+  },
 
 }
 </script>
@@ -57,14 +73,17 @@ h3 {
 p {
     font-family: 'fira sans';
     font-size: 1em;
-    margin: 16px 0;
+    padding: 16px 0;
 }
 
 /* Layout */
 
-:root {
+
+:root, html, section, article {
     background: #F3E4E1;
 }
+
+
 .wrapper {
     background: #F3E4E1;
     height:100vh;
@@ -73,8 +92,7 @@ p {
 
 
 article {
-    
-    padding: 4%;
+  padding: 0 2% 0 2%;
 }
 
 article p {
@@ -88,15 +106,25 @@ p {
 
 .center {
     text-align: center;
+    background: #F3E4E1;
 }
 
-footer {
-    background-image: url("../assets/graphics/graphics-footer.svg");
-    background-repeat: no-repeat;
-    width: 1000px;
-    background-position: center;
-    height: 20vh;
+/* FOOTER  */
+/* footer {
+    
+    background-color: #F3E4E1;
 }
+
+#bg {
+        background: url('../assets/graphics/graphics-footer.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-size: cover;
+        height: 20vh;
+        width: 100%;
+        background-color: #F3E4E1;     
+} */
 
 /* annat */
 
