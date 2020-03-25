@@ -12,9 +12,9 @@
         </div>
         <div v-if="$store.state.toggleOpen" class="centre navigation">
             <nav class="navbar-links">
-                <router-link to="/menu">Meny</router-link>
+                <router-link to="/menu" v-on:click.native="toggleOff">Meny</router-link>
                 <div class="border"></div>
-                <router-link to="/ourcoffee" >Vårt kaffe</router-link>
+                <router-link to="/ourcoffee"  v-on:click.native="toggleOff" >Vårt kaffe</router-link>
                 <div class="border"></div>
                 <router-link to="/Orderstatus">Orderstatus</router-link>
             </nav>
@@ -30,11 +30,12 @@
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
-            }
-        },
-          created() {
-    this.toggle()
-  }
+
+            },
+             toggleOff(){
+            this.toggle()
+        }
+        }
     }
 </script>
 <style lang="scss" scoped>
@@ -77,7 +78,8 @@
         transition: all 0.4s ease-in-out;
         border: none;
         margin-left: auto;
-        margin-right: 5%;
+        margin-right: 10px;
+        margin-top: 10px;
     }
 
     /* NAVIGATION */
@@ -147,8 +149,9 @@
         cursor: pointer;
         transition: all 0.4s ease-in-out;
         border: none;
-        position: fixed;
+        position:relative;
         margin-left: 10px;
+        margin-top: 10px;
     }
 
 
