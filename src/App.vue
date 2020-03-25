@@ -1,25 +1,8 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Menu</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <!-- <router-link to="/OrderStatus"> Order Status </router-link> -->
-
-  
+  <div id="app"> 
     <router-view/>
   </div>
 </template>
-<script>
-import Home from './views/Start'
-
-export default {
-  name: 'App',
-  component: {
-     Home
-  }
-}
-</script>
 
 <style lang="scss">
 #app {
