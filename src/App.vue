@@ -10,6 +10,16 @@
     <router-view/>
   </div>
 </template>
+<script>
+import Home from './views/Start'
+
+export default {
+  name: 'App',
+  component: {
+     Home
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

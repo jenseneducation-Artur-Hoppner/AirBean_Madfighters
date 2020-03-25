@@ -1,7 +1,5 @@
 <template>
 <section>
-
-
       <div class="centre">
          <h1>Din beställning</h1>
       </div>
