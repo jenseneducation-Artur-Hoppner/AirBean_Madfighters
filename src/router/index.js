@@ -14,11 +14,7 @@ const routes = [
     name: 'Menu',
     component: Menu
   },
-  {
-    path: '/Menu',
-    name: 'Menu',
-    component: Menu
-  },
+  
   {
     path: '/About',
     name: 'About',
