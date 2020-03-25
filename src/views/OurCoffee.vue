@@ -1,10 +1,5 @@
 <template>
     <div class="wrapper">
-              <!-- <header>
-            <nav><i class="fa fa-bars"></i>  </nav>
-        </header> -->
-
-
         <Header />
         <article>
             <h1> Vårt kaffe </h1>
@@ -38,7 +33,7 @@ export default {
     Header,
     Footer
    
-  },
+  }
 
 }
 </script>
