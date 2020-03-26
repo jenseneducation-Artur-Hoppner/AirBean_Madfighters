@@ -7,7 +7,7 @@
             </nav>
         </div>
         <div class="column">
-            <nav class="btn-bag"><img id="bag-sign" src="../assets/graphics/bag.svg" alt=""></nav>
+            <nav class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
         </div>
         <div v-if="$store.state.toggleOpen" class="centre navigation">
             <nav class="navbar-links">
@@ -32,6 +32,8 @@
     }
 </script>
 <style lang="scss" scoped>
+@import "./../assets/scss/variables";
+
 
     header {
         background: url('../assets/graphics/graphics-header.svg');
@@ -56,6 +58,7 @@
         z-index: 1000;
     }
 
+/* Bag icon */
 
 
     .btn-bag {
@@ -75,6 +78,25 @@
         margin-top: 10px;
     }
 
+
+/* Counter icon */
+
+.counter {
+    background:red;
+    width:1.2rem;
+    height:1.2rem;
+    border-radius: 50%;
+    position:absolute;
+    margin-left: 15px;
+    margin-top: 3px;
+    font-size: .6rem;
+    color:white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
     /* NAVIGATION */
 
 
@@ -109,7 +131,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: #2F2926;
+        background: $brown;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -122,7 +144,7 @@
 
     :root {
         color: #fff;
-        font-family: muli;
+        font-family: 'Work Sans', sans-serif;
         font-size: 2em;
         background: #312926;
     }

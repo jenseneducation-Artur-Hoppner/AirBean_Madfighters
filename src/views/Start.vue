@@ -14,7 +14,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "./../assets/scss/variables";
 #logo{
     width:6em;
 }
@@ -23,7 +24,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #38846d;
+    background-color: $green;
     text-align: center;
     color: #FCFEFD;
     background-image: url("../assets/graphics/intro-graphic-right.svg"), url("../assets/graphics/intro-graphic-left.svg");
@@ -31,13 +32,13 @@ export default {
     background-repeat: no-repeat, no-repeat;
 } 
 /* Typography */
-h1,h2,h3,h4 {
-    font-family: 'playfair display';
+h1 {
+    font-family: 'playfair display' ,'serif';
     font-size: 5rem;
     line-height: 1.5em;
 } 
 p {
-    font-family: 'fira sans';
+    font-family: 'Work Sans', sans-serif;
     letter-spacing: .3em;
     font-weight: 100;
 }

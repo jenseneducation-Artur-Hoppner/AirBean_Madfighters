@@ -35,12 +35,11 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "./../assets/scss/variables";
+
 /* Typography */
-.fa-bars {
-    color: hotpink;
-    font-size: 5em;
-}
+
 h1 {
 font-weight: 550;
 }
@@ -48,11 +47,11 @@ font-weight: 550;
 .sub-heading {
     font-size: 1.3em;
     font-weight: 500;
-    font-family: 'fira sans';
+    font-family: 'Work Sans', sans-serif;
 }
 
 h1,h2 {
-    font-family: 'playfair display';
+    font-family: 'PT Serif', serif;
     font-size: 5rem;
     line-height: 1.4em;
 } 
@@ -63,25 +62,22 @@ h3 {
 }
 
 p {
-    font-family: 'fira sans';
+    font-family: 'Work Sans', sans-serif;
     font-size: 1em;
     padding: 16px 0;
 }
 
 /* Layout */
 
-
 :root, html, section, article {
-    background: #F3E4E1;
+    background: $pink;
 }
 
-
 .wrapper {
-    background: #F3E4E1;
+    background: $pink;
     height:100vh;
     max-width: 1200px;
 }
-
 
 article {
   padding: 0 2% 0 2%;
@@ -91,32 +87,10 @@ article p {
     line-height: 1.5;
 }
 
-
-p {
-    font-family: 'fira sans';
-}
-
 .center {
     text-align: center;
-    background: #F3E4E1;
+    background: $pink;
 }
-
-/* FOOTER  */
-/* footer {
-    
-    background-color: #F3E4E1;
-}
-
-#bg {
-        background: url('../assets/graphics/graphics-footer.svg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-size: cover;
-        height: 20vh;
-        width: 100%;
-        background-color: #F3E4E1;     
-} */
 
 /* annat */
 
