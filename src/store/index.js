@@ -5,17 +5,37 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  
   state: {
     apiMenu: [],
     cartItems: [],
+    
   },
+  
   mutations: {
+      
+    // addMenuApi (state) {
+    //   state.Menu // === apiMenu
+    // }
 
   },
   actions: {
+  //   increment (context) {
+  //     context.commit('addMenuApi')
+  // }
+
+  
+    // const apiMenu api
         //Get the api here
         //Post the api here
   },
+
+  getters: {
+    // sendMenu: state => {
+    //   return state.apiMenu.filter(name => name);
+    // }
+  },
+
   modules: {
 
   }
