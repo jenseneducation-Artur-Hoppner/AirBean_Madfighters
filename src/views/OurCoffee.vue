@@ -15,9 +15,7 @@
      <h3>Eva Cortado</h3>
      <p>VD &amp; Grundare</p>
 </section>
-
 <Footer />
-
     </div>
 </template>
 
@@ -29,13 +27,12 @@ import Footer from '../components/Footer';
 export default {
     name: 'OurCoffee',
   components: {
-  
     Header,
     Footer
-   
   }
+    }
 
-}
+
 </script>
 
 <style scoped>

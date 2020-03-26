@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-  toggleOpen: true,
+  toggleOpen: false,
   },
   mutations: {
     toggleMenu(state) {
@@ -17,7 +17,6 @@ export default new Vuex.Store({
     
   },
   modules: {
-
     // in here 
   }
 

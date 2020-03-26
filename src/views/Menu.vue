@@ -17,12 +17,16 @@
 <script>
 
 import Header from '../components/Header';
-
 export default {
   components: {
     Header
-  }
-
+  },
+   methods: {
+            toggle() {
+                this.$store.commit('toggleMenu');
+                console.log("toggle() ran")
+            }
+        }
 }
 
 </script>

@@ -10,7 +10,9 @@
 
 <script>
 export default {
-
+mounted() {
+    
+}
 }
 </script>
 
@@ -43,7 +45,6 @@ p {
     font-family: 'playfair display';
     font-size: 4em;
     font-weight: 700;
-    
     line-height: 1.4em;
     color: #fff;
 } 
