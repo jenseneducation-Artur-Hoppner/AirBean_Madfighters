@@ -7,33 +7,41 @@
             </nav>
         </div>
         <div class="column">
-            <nav class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+            <nav @click="showCart" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
         </div>
-        <div v-if="$store.state.toggleOpen" class="centre navigation">
-            <nav class="navbar-links">
-                <router-link to="/menu" v-on:click.native="toggle">Meny</router-link>
-                <div class="border"></div>
-                <router-link to="/about" v-on:click.native="toggle" >Vårt kaffe</router-link> 
-                <div class="border"></div>
-                <router-link to="/Orderstatus">Orderstatus</router-link>
-            </nav>
-        </div>
+      <Navigation v-if="$store.state.toggleOpen" /> 
     </header>
 </template>
 
 <script>
+import Navigation from '../components/Navigation';
     export default {
         name: "Header",
+        components: {
+            Navigation
+        },
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
+        },
+
+        showCart(){
+            console.log("showCart ran ")
         }
+
         }
     }
 </script>
 <style lang="scss" scoped>
 @import "./../assets/scss/variables";
 
+
+    :root {
+        color: #fff;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 2em;
+        background: #312926;
+    }
 
     header {
         background: url('../assets/graphics/graphics-header.svg');
@@ -51,15 +59,13 @@
         flex: 50%;
     }
 
-
     /* Navigation */
     #nav-icon {
         width: 25px;
         z-index: 1000;
     }
 
-/* Bag icon */
-
+    /* Bag icon */
 
     .btn-bag {
         font-size: 4.42em;
@@ -78,11 +84,10 @@
         margin-top: 10px;
     }
 
-
-/* Counter icon */
+    /* COUNTER ICON */
 
 .counter {
-    background:red;
+    background:$orange;
     width:1.2rem;
     height:1.2rem;
     border-radius: 50%;
@@ -97,57 +102,39 @@
     align-items: center;
     text-align: center;
 }
-    /* NAVIGATION */
+    // /* NAVIGATION */
 
+    // .border {
+    //     height: 1px;
+    //     width: 2rem;
+    //     background-color: rgba(255, 255, 255, 0.63);
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     margin: auto;
+    // }
+    // .navigation {
+    //     font-size: 2em;
+    //     color: #fff;
+    // }
 
-    .border {
-        height: 1px;
-        width: 2rem;
-        background-color: rgba(255, 255, 255, 0.63);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
+    // .navigation {
+    //     z-index: 999;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     background: $brown;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     text-align: center;
+    //     line-height: 2;
+    // }
 
-    }
-
-
-    .navigation {
-
-        /* Sit on top of the page content */
-
-
-        font-size: 2em;
-        color: #fff;
-
-
-    }
-
-    .navigation {
-        z-index: 999;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: $brown;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        line-height: 2;
-
-
-    }
-
-    :root {
-        color: #fff;
-        font-family: 'Work Sans', sans-serif;
-        font-size: 2em;
-        background: #312926;
-    }
 
 
     .btn-nav {
@@ -168,9 +155,6 @@
         margin-left: 10px;
         margin-top: 10px;
     }
-
-
-
 
     .navbar-links {
         font-family: 'PT Serif', serif;

@@ -8,7 +8,7 @@
       <!--- v-for goes here ^_^  --->
       <div class="item2"><button class="btn-menu"><img id="menu-increase" src="../assets/graphics/plus.png" alt=""></button></div>
       <div class="item3 menu-heading">Caffè Doppio</div>
-      <div class="item4 menu-heading">49kr</div>
+      <div class="item4 menu-heading"><span class="dots"> </span>49kr</div>
       <div class="item5 menu-sub-heading">Bryggd på månadens bönor</div>
    </div>
 </section>
@@ -103,5 +103,15 @@ font-family:' PT serif', "serif";
     transition: all 0.4s ease-in-out;
     margin-left: 10px;
 }
+
+/* not working 
+
+        ¯\_(ツ)_/¯  */
+.dots {
+  width:30px;
+  border-bottom: 2px dotted black;
+ 
+}
+
 
 </style>

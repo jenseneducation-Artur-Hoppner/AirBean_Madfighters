@@ -1,5 +1,3 @@
-
-
 <template>
 <section>
       <div class="centre">
