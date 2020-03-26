@@ -9,7 +9,14 @@ const API = axios.create({
     try {
       const response = await API.get('/api/beans');
       console.log(response.data.menu);
+
       const menuData = response.data.menu;
+
+      console.log(response.data.menu.constructor);
+
+      // let parsing = JSON.parse(menuData);
+      // console.log(parsing);
+
       return menuData
     } catch (err) {
       console.error(err);
