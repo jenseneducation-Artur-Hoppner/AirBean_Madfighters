@@ -2,14 +2,16 @@
     <header>
         <div class="column">
             <nav class="btn-nav" @click="toggle">
-                <img id="nav-icon" v-if="$store.state.toggleOpen" src="../assets/graphics/close.svg" alt="">
-                <img id="nav-icon" v-if="!$store.state.toggleOpen" src="../assets/graphics/open-menu.svg" alt="">
+                <img id="nav-icon" v-if="$store.state.showMenu" src="../assets/graphics/close.svg" alt="">
+                <img id="nav-icon" v-if="!$store.state.showMenu" src="../assets/graphics/open-menu.svg" alt="">
             </nav>
         </div>
         <div class="column">
-            <nav @click="showCart" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+            <nav @click="show" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
         </div>
-      <Navigation v-if="$store.state.toggleOpen" /> 
+      <Navigation v-if="$store.state.showMenu" /> 
+        <div v-if="$store.state.cartVisible"> Shopping bag here </div>
+
     </header>
 </template>
 
@@ -25,8 +27,9 @@ import Navigation from '../components/Navigation';
                 this.$store.commit('toggleMenu');
         },
 
-        showCart(){
-            console.log("showCart ran ")
+        show(){
+            this.$store.commit('showCart')
+            console.log("show ran ")
         }
 
         }

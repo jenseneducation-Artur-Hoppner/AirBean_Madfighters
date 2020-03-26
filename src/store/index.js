@@ -5,13 +5,20 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-  toggleOpen: false,
+  showMenu: false,
+  cartVisible: false
   },
   mutations: {
     toggleMenu(state) {
-      console.log(state.toggleOpen);
-      state.toggleOpen = !state.toggleOpen
+      console.log(state.showMenu);
+      state.showMenu = !state.showMenu
+    },
+
+    showCart(state) {
+      state.cartVisible = !state.cartVisible
+      console.log( "showCart = " + state.cartVisible)
     }
+
   },
   actions: {
     
