@@ -10,7 +10,7 @@
             <nav @click="show" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
-        <div v-if="$store.state.cartVisible"> Shopping bag here </div>
+        <div v-if="$store.state.showCart"> Shopping bag here </div>
 
     </header>
 </template>
