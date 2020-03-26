@@ -27,7 +27,6 @@
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
-            
         }
         }
     }
