@@ -13,7 +13,7 @@
             <nav class="navbar-links">
                 <router-link to="/menu" v-on:click.native="toggle">Meny</router-link>
                 <div class="border"></div>
-                <router-link to="/ourcoffee" v-on:click.native="toggle" >Vårt kaffe</router-link> 
+                <router-link to="/about" v-on:click.native="toggle" >Vårt kaffe</router-link> 
                 <div class="border"></div>
                 <router-link to="/Orderstatus">Orderstatus</router-link>
             </nav>
