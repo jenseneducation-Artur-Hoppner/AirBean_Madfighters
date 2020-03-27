@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: 'http://localhost:5000/api',
   });
 
 
   async function getMenu() {
     try {
-      const response = await API.get('/api/beans');
-      // console.log(response.data.menu);
+      const response = await API.get('/beans');
+      console.log(response.data.menu);
       const menuData = response.data.menu;
 
       // console.log(response.data.menu.constructor);
@@ -19,12 +19,12 @@ const API = axios.create({
     }
   }
 
-getMenu()
+// getMenu()
 
 
 async function postOrder() {
     try {
-    const response = await API.post('/api/beans')
+    const response = await API.post('/beans')
       // console.log(response.data);
     const orderData = response.data
 
@@ -38,6 +38,6 @@ async function postOrder() {
 
 postOrder()
 
-export {getMenu}
+export { getMenu }
 // module.exports = {getMenu}
 // module.exports.postOrder()

@@ -33,12 +33,12 @@ export default {
     computed: {
       getMenuHere(){
       return this.$store.state.menu
-     
       },
-     
-    
     },
 
+  mounted() {
+    this.$store.dispatch("getApiMenu");
+  },
   
    methods: {
             toggle() {

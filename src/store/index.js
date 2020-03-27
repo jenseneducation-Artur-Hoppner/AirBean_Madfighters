@@ -10,7 +10,7 @@ export default new Vuex.Store({
   state: {
     cartItems: [], // From Lova
     cart: [], // From Ade
-    menu: [], // From Ade
+    menu: [],
     order: {}, // From Ade
     showMenu: false, // From Lova
     showCart: false // From Lova
@@ -21,7 +21,7 @@ export default new Vuex.Store({
       async getApiMenu({commit}) {
         const data = await api.getMenu();
         commit("addToMenu", data);
-        // return true;
+        return true;
       },
           // From Ade
           addItem(context, item) {
@@ -32,9 +32,7 @@ export default new Vuex.Store({
 
   mutations: {
     addToMenu: (state, data) => (state.menu = data),
-    // addToMenu(state, data) {
-    //   state.menu = data;
-  // },
+
 
 
      // From Lova
