@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Start from '../views/Start.vue'
 import Menu from '../views/Menu.vue'
-import Api from '../api/Index.js'
+// import Api from '../api/Index.js'
 import About from '../views/About.vue'
 
 
@@ -21,11 +21,11 @@ const routes = [
     name: 'Menu',
     component: Menu
   },
-  {
-    path: '/Api',
-    name: 'Api',
-    component: Api
-  },
+  // {
+  //   path: '/Api',
+  //   name: 'Api',
+  //   component: Api
+  // },
 
   {
     path: '/About',

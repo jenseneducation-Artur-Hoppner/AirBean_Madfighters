@@ -8,7 +8,7 @@ const API = axios.create({
   async function getMenu() {
     try {
       const response = await API.get('/api/beans');
-      console.log(response.data.menu);
+      // console.log(response.data.menu);
       const menuData = response.data.menu;
 
       // console.log(response.data.menu.constructor);
@@ -25,7 +25,7 @@ getMenu()
 async function postOrder() {
     try {
     const response = await API.post('/api/beans')
-      console.log(response.data);
+      // console.log(response.data);
     const orderData = response.data
 
         // console.log(response.data.constructor);
@@ -38,7 +38,6 @@ async function postOrder() {
 
 postOrder()
 
-
-
-// module.exports.getMenu()
+export {getMenu}
+// module.exports = {getMenu}
 // module.exports.postOrder()
