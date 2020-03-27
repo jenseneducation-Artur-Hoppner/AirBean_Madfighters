@@ -4,15 +4,31 @@ import Vuex from 'vuex'
 // import {getMenu} from '@/api/index.js' // another way of importing just one thing 
 Vue.use(Vuex)
 
+
 export default new Vuex.Store({
   state: {
     apiMenu: [], // From Artur
     cartItems: [], // From Lova
     cart: [], // From Ade
     menu: [], // From Ade
-    order: {} // From Ade
+    order: {}, // From Ade
+    showMenu: false, // From Lova
+    showCart: false // From Lova
   },
+
+
   mutations: {
+// From Lova
+toggleMenu(state) {
+  console.log(state.showMenu);
+  state.showMenu = !state.showMenu
+},
+
+showCart(state) {
+  state.showCart = !state.showCart
+  console.log( "showCart = " + state.showCart)
+},
+//______________________________
 
 // From Ade
 addToCart(state, item) {
@@ -32,12 +48,12 @@ updateItem(state, id) {
   state.cart[index].quantity++;
 }
 // ____________________________________
-
-
   },
+
+
   actions: {
-        //Get the api here
-        //Post the api here
+        //Get the api here //Artur
+        //Post the api here //Artur
 
 
         // From Ade
@@ -46,6 +62,7 @@ updateItem(state, id) {
         }
         // ____________________________________
   },
+
 
   getters: {
     // From Ade
@@ -63,7 +80,7 @@ updateItem(state, id) {
   },
 
   modules: {
-
+ // ??? use for???
   }
 
 })

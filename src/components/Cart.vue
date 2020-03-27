@@ -1,7 +1,5 @@
 <template>
 <section>
-
-
       <div class="centre">
          <h1>Din beställning</h1>
       </div>
@@ -38,11 +36,9 @@
 </template>
 
 <script>
-
 export default {
 
 }
-
 </script>
 
 <style scoped>
