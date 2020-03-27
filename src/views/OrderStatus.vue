@@ -11,6 +11,15 @@
 <script>
 export default {
 
+    // From Ade ????
+  name: "OrderStatus",
+  computed: {
+    order() {
+      return this.$store.state.order;
+    }
+  }
+    //_______________________________
+
 }
 </script>
 
