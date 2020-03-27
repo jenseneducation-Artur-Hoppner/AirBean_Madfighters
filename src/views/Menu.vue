@@ -1,12 +1,14 @@
 <template>
 <section>
+  <Header />
    <h1>Meny</h1>
+
    <!-- Following should be inside a MenuItem component I guess???  ^_^   -->
    <div class="container menu-item">
       <!--- v-for goes here ^_^  --->
-      <div class="item2"><button class="btn-menu"><img id="menu-sign" src="../assets/graphics/plus.png" alt=""></button></div>
+      <div class="item2"><button class="btn-menu"><img id="menu-increase" src="../assets/graphics/plus.png" alt=""></button></div>
       <div class="item3 menu-heading">Caffè Doppio</div>
-      <div class="item4 menu-heading">49kr</div>
+      <div class="item4 menu-heading"><span class="dots"> </span>49kr</div>
       <div class="item5 menu-sub-heading">Bryggd på månadens bönor</div>
    </div>
 </section>
@@ -14,8 +16,17 @@
 
 <script>
 
+import Header from '../components/Header';
 export default {
-
+  components: {
+    Header
+  },
+   methods: {
+            toggle() {
+                this.$store.commit('toggleMenu');
+                console.log("toggle() ran")
+            }
+        }
 }
 
 </script>
@@ -40,19 +51,17 @@ text-align: right;}
     'left main main main right right'
     'left sub sub sub sub sub';
   grid-gap: 10px;
-  padding: 10px;
 }
 
 section {
     max-width: 900px;
     background: #F3E4E1;
     height: 100vh;
-    padding: 2%;
 }
 /* Typography */
 
 h1 {
-    font-family: 'playfair display';
+    font-family: ' PT serif', "serif";
     font-size: 4rem;
     line-height: 1.4em;
     text-align: center;
@@ -62,7 +71,7 @@ h1 {
 .menu-heading {
 font-size: 2em;
 font-weight: 700;
-font-family:' Playfair Display';
+font-family:' PT serif', "serif";
 }
 
 /* spacing between menu items */
@@ -71,29 +80,38 @@ font-family:' Playfair Display';
 }
 
 .menu-sub-heading {
-    font-family: muli, Arial, Helvetica, sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-size:.8em;
 }
 
-/*  */
-#menu-sign {
+#menu-increase {
     filter: invert(100%); 
   -webkit-filter:invert(100%); 
   width:30px;
-  
 }
 
 .btn-menu {
-  font-size: 4.42em;
+    font-size: 4.42em;
     font-weight: 300;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background: #000;
     display: flex;
     justify-content: center;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+    margin-left: 10px;
 }
+
+/* not working 
+
+        ¯\_(ツ)_/¯  */
+.dots {
+  width:30px;
+  border-bottom: 2px dotted black;
+ 
+}
+
 
 </style>

@@ -1,4 +1,4 @@
-    <template>
+<template>
 <main class="wrapper">
     <p id="order">Ordernummer <span style="font-weight:700;">#12DV23F</span></p>
     <img src="../assets/graphics/drone.svg" alt="drone">
@@ -10,14 +10,6 @@
 
 <script>
 export default {
-        // From Ade ????
-  name: "OrderStatus",
-  computed: {
-    order() {
-      return this.$store.state.order;
-    }
-  },
-  //_______________
 mounted() {
     
 }
@@ -68,5 +60,3 @@ p {
 }
 
 </style>
-    
-    

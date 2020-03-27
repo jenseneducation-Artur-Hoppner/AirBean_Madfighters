@@ -3,8 +3,7 @@ import VueRouter from 'vue-router'
 import Start from '../views/Start.vue'
 import Menu from '../views/Menu.vue'
 import Api from '../api/Index.js'
-import OrderStatus from '../views/OrderStatus.vue'
-import OurCoffee from '../views/OurCoffee.vue'
+import About from '../views/About.vue'
 
 
 
@@ -27,16 +26,14 @@ const routes = [
     name: 'Api',
     component: Api
   },
+
   {
-  path: '/OrderStatus',
-  name: 'OrderStatus',
-  component: OrderStatus
-},
-{
-  path: '/OurCoffee',
-  name: 'OurCoffee',
-  component: OurCoffee
-}
+    path: '/About',
+    name: 'About',
+    component: About
+  },
+
+
 ]
 
 const router = new VueRouter({

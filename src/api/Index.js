@@ -10,6 +10,9 @@ const API = axios.create({
       const response = await API.get('/api/beans');
       console.log(response.data.menu);
       const menuData = response.data.menu;
+
+      // console.log(response.data.menu.constructor);
+
       return menuData
     } catch (err) {
       console.error(err);
@@ -24,6 +27,9 @@ async function postOrder() {
     const response = await API.post('/api/beans')
       console.log(response.data);
     const orderData = response.data
+
+        // console.log(response.data.constructor);
+
         return orderData
       } catch (err) {
         console.log(err)
