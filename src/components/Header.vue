@@ -10,17 +10,20 @@
             <nav @click="show" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
-        <div v-if="$store.state.showCart"> Shopping bag here </div>
-
+        <Cart v-if="$store.state.showCart" />
     </header>
 </template>
 
 <script>
 import Navigation from '../components/Navigation';
+import Cart from '../components/Cart';
+
+
     export default {
         name: "Header",
         components: {
-            Navigation
+            Navigation,
+            Cart
         },
         methods: {
             toggle() {
@@ -85,6 +88,7 @@ import Navigation from '../components/Navigation';
         margin-left: auto;
         margin-right: 10px;
         margin-top: 10px;
+        
     }
 
     /* COUNTER ICON */
