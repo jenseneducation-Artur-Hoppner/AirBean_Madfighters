@@ -3,17 +3,13 @@
   <Header />
    <h1>Meny</h1>
 
-<ul>
-  <li  v-for=" menu in $store.getMenuHere" :key="menu.id" ></li>
-</ul>
-
    <!-- Following should be inside a MenuItem component I guess???  ^_^   -->
-   <div class="container menu-item">
+   <div v-bind:menu="menu" v-for="menu in getMenuHere" :key="menu.id" class="container menu-item">
       <!--- v-for goes here ^_^  --->
       <div class="item2"><button class="btn-menu"><img id="menu-increase" src="../assets/graphics/plus.png" alt=""></button></div>
-      <div class="item3 menu-heading">Caffè Doppio</div>
-      <div class="item4 menu-heading"><span class="dots"> </span>49kr</div>
-      <div class="item5 menu-sub-heading">Bryggd på månadens bönor</div>
+      <div class="item3 menu-heading">{{menu.title}}</div>
+      <div class="item4 menu-heading"><span class="dots"> </span>{{menu.price}}</div>
+      <div class="item5 menu-sub-heading">{{menu.desc}}</div>
    </div>
 </section>
 </template>
