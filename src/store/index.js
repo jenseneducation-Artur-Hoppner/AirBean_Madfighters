@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import * as api from '../api/Index.js'
+// import * as api from '../api/Index.js'
+import {getMenu} from '../api/Index.js'; 
+// import {postOrder} from '../api/Index.js'; 
 
-// import {getMenu} from '@/api/index.js' // another way of importing just one thing 
 Vue.use(Vuex)
 
 
@@ -18,11 +19,21 @@ export default new Vuex.Store({
 
 
   actions: {
+
+      // Importing from api/index.js and get menu
       async getApiMenu({commit}) {
-        const data = await api.getMenu();
+        const data = await getMenu();
         commit("addToMenu", data);
         return true;
       },
+
+      // Importing from api/index.js and post order
+      // async getApiOrder({commit}) {
+      //   const data = await postOrder();
+      //   commit("addToOrder", data);
+      //   return true;
+      // },
+      
           // From Ade
           addItem(context, item) {
             context.commit("addToCart", item);
@@ -31,7 +42,11 @@ export default new Vuex.Store({
   },
 
   mutations: {
+    //Pass Api menu to state menu
     addToMenu: (state, data) => (state.menu = data),
+    
+    //Pass Api order to state order
+    // addToOrder: (state, data) => (state.order = data),
 
 
 

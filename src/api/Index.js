@@ -38,6 +38,7 @@ async function postOrder() {
 
 postOrder()
 
-export { getMenu }
-// module.exports = {getMenu}
-// module.exports.postOrder()
+
+export { postOrder, getMenu }
+
+
