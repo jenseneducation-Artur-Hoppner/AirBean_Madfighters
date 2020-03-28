@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 // import * as api from '../api/Index.js'
 import {getMenu} from '../api/Index.js'; 
-// import {postOrder} from '../api/Index.js'; 
+import {postOrder} from '../api/Index.js'; 
 
 Vue.use(Vuex)
 
@@ -28,11 +28,11 @@ export default new Vuex.Store({
       },
 
       // Importing from api/index.js and post order
-      // async getApiOrder({commit}) {
-      //   const data = await postOrder();
-      //   commit("addToOrder", data);
-      //   return true;
-      // },
+      async getApiOrder({commit}) {
+        const data = await postOrder();
+        commit("addToOrder", data);
+        return true;
+      },
       
           // From Ade
           addItem(context, item) {
@@ -46,7 +46,7 @@ export default new Vuex.Store({
     addToMenu: (state, data) => (state.menu = data),
     
     //Pass Api order to state order
-    // addToOrder: (state, data) => (state.order = data),
+    addToOrder: (state, data) => (state.order = data),
 
 
 

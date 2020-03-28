@@ -4,6 +4,7 @@ import Start from '../views/Start.vue'
 import Menu from '../views/Menu.vue'
 // import Api from '../api/Index.js'
 import About from '../views/About.vue'
+import OrderStatus from '../views/OrderStatus.vue'
 
 
 
@@ -32,7 +33,11 @@ const routes = [
     name: 'About',
     component: About
   },
-
+  {
+    path: '/OrderStatus',
+    name: 'OrderStatus',
+    component: OrderStatus
+  },
 
 ]
 

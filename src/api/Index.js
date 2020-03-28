@@ -36,7 +36,7 @@ async function postOrder() {
       }
 }
 
-postOrder()
+// postOrder()
 
 
 export { postOrder, getMenu }
