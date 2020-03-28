@@ -18,7 +18,6 @@
 import Navigation from '../components/Navigation';
 import Cart from '../components/Cart';
 
-
     export default {
         name: "Header",
         components: {
@@ -34,7 +33,6 @@ import Cart from '../components/Cart';
             this.$store.commit('showCart')
             console.log("show ran ")
         }
-
         }
     }
 </script>
@@ -88,7 +86,6 @@ import Cart from '../components/Cart';
         margin-left: auto;
         margin-right: 10px;
         margin-top: 10px;
-        
     }
 
     /* COUNTER ICON */
@@ -145,7 +142,6 @@ import Cart from '../components/Cart';
 
 
     .btn-nav {
-
         z-index: 1000;
         font-size: 4.42em;
         font-weight: 300;
@@ -166,7 +162,5 @@ import Cart from '../components/Cart';
     .navbar-links {
         font-family: 'PT Serif', serif;
         font-weight: 700;
-
-
     }
 </style>
