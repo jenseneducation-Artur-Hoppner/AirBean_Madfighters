@@ -18,7 +18,7 @@ export default {
     }
   },
   //_______________
-mounted() {
+    created() {
         this.$store.dispatch("getApiOrder");
 
 }
