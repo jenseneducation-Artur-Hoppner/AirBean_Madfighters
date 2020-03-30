@@ -10,17 +10,19 @@
             <nav @click="show" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
-        <div v-if="$store.state.showCart"> Shopping bag here </div>
-
+        <Cart v-if="$store.state.showCart" />
     </header>
 </template>
 
 <script>
 import Navigation from '../components/Navigation';
+import Cart from '../components/Cart';
+
     export default {
         name: "Header",
         components: {
-            Navigation
+            Navigation,
+            Cart
         },
         methods: {
             toggle() {
@@ -31,7 +33,6 @@ import Navigation from '../components/Navigation';
             this.$store.commit('showCart')
             console.log("show ran ")
         }
-
         }
     }
 </script>
@@ -141,7 +142,6 @@ import Navigation from '../components/Navigation';
 
 
     .btn-nav {
-
         z-index: 1000;
         font-size: 4.42em;
         font-weight: 300;
@@ -162,7 +162,5 @@ import Navigation from '../components/Navigation';
     .navbar-links {
         font-family: 'PT Serif', serif;
         font-weight: 700;
-
-
     }
 </style>

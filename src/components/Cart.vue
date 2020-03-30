@@ -1,6 +1,8 @@
+
+
 <template>
 <section>
-      <div class="centre">
+      <div >
          <h1>Din beställning</h1>
       </div>
       <!--Menu Item start -->
@@ -55,12 +57,18 @@ export default {
     margin-top: 40px;
 }
 
-
+section {
+    background: #fff;
+    height:50vh;
+    width: 50vw;
+}
 .centre {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
     font-family: 'Playfair display' , sans-serif;
+    background: #fff;
+    position: absolute;
 }
 
 .right {

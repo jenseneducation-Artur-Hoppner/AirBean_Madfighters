@@ -8,7 +8,6 @@ import OrderStatus from '../views/OrderStatus.vue'
 
 
 
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -33,12 +32,12 @@ const routes = [
     name: 'About',
     component: About
   },
-  {
-    path: '/OrderStatus',
-    name: 'OrderStatus',
-    component: OrderStatus
-  },
 
+  {
+  path: '/OrderStatus',
+  name: 'OrderStatus',
+  component: OrderStatus
+}
 ]
 
 const router = new VueRouter({

@@ -103,13 +103,3 @@ export default new Vuex.Store({
   },
 
 })
-
-
-
-// getApiMenu ({commit}) {
-
-//   commit('addToMenu',  response.data)
-// },
-
-
-      // addToMenu: (state, menu) => (state.menu = menu),
