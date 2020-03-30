@@ -1,17 +1,26 @@
-<template>
-<main class="wrapper">
-    <p id="order">Ordernummer <span style="font-weight:700;">#12DV23F</span></p>
+    <template>
+<main v-bind="order in order" class="wrapper">
+    <p id="order"> Ordernummer: <span style="font-weight:700;">{{order.orderNr}}</span></p>
     <img src="../assets/graphics/drone.svg" alt="drone">
     <h1 id="order-heading">Din beställning är på väg!</h1>
-    <p id="ETA">13 minuter</p>
+    <p id="ETA">{{order.eta}} minuter</p>
     <button class="btn">Ok, cool!</button>
 </main>
 </template>
 
 <script>
 export default {
-mounted() {
-    
+        // From Ade ????
+  name: "OrderStatus",
+  computed: {
+    order() {
+      return this.$store.state.order;
+    }
+  },
+  //_______________
+    created() {
+        this.$store.dispatch("getApiOrder");
+
 }
 }
 </script>
@@ -60,3 +69,5 @@ p {
 }
 
 </style>
+    
+    
