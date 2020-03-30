@@ -41,7 +41,7 @@ export default {
 /* Typography */
 
 h1 {
-font-weight: 550;
+font-weight: 700;
 }
 
 .sub-heading {
