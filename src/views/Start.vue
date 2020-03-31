@@ -1,7 +1,9 @@
 <template>
  <div class="wrapper">
 <main class="main">
+    <router-link id="logo" to="/Menu">
     <img id="logo" src="@/assets/graphics/logo.svg">
+    </router-link>
 <h1>AIR BEAN</h1>
 <p>DRONEDELIVERED COFFEE</p>
 </main>
