@@ -7,7 +7,7 @@
             </nav>
         </div>
         <div class="column">
-            <nav @click="show" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+            <nav @click="show" class="btn-bag"><aside class="counter">{{ cartItemCount }}</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
         <Cart v-if="$store.state.showCart" />
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Navigation from '../components/Navigation';
 import Cart from '../components/Cart';
 
@@ -24,6 +25,10 @@ import Cart from '../components/Cart';
             Navigation,
             Cart
         },
+        computed: {
+            ...mapGetters(['cartItemCount'])
+        },
+
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
