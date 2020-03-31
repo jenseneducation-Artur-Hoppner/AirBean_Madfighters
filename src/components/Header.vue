@@ -7,7 +7,12 @@
             </nav>
         </div>
         <div class="column">
-            <nav @click="show" class="btn-bag"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+
+            <!-- CartIcon Start --> 
+            <!-- <nav @click="show" class="cart-icon"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav> -->
+            <!--- CartIcon End -->
+
+            <CartIcon /> 
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
         <Cart v-if="$store.state.showCart" />
@@ -17,12 +22,14 @@
 <script>
 import Navigation from '../components/Navigation';
 import Cart from '../components/Cart';
+import CartIcon from '../components/CartIcon';
 
     export default {
         name: "Header",
         components: {
             Navigation,
-            Cart
+            Cart,
+            CartIcon
         },
         methods: {
             toggle() {
@@ -69,9 +76,9 @@ import Cart from '../components/Cart';
         z-index: 1000;
     }
 
-    /* Bag icon */
+    /* Cart Icon */
 
-    .btn-bag {
+    .cart-icon {
         font-size: 4.42em;
         font-weight: 300;
         width: 45px;

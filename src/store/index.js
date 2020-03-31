@@ -10,7 +10,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     cartItems: [], // From Lova
-    cart: [], // From Ade
+    cart: [1], // From Ade
     menu: [],
     order: {}, // From Ade
     showMenu: false, // From Lova
@@ -47,8 +47,6 @@ export default new Vuex.Store({
     
     //Pass Api order to state order
     addToOrder: (state, data) => (state.order = data),
-
-
 
      // From Lova
     toggleMenu(state) {

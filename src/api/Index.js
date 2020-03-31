@@ -21,7 +21,6 @@ const API = axios.create({
 
 // getMenu()
 
-
 async function postOrder() {
     try {
     const response = await API.post('/beans')
