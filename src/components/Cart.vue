@@ -40,7 +40,6 @@
 </script>
 
 <style lang="scss" scoped>
-
 .counter {
     width:30px;
     position: absolute;

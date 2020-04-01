@@ -7,11 +7,6 @@
             </nav>
         </div>
         <div class="column">
-
-            <!-- CartIcon Start --> 
-            <!-- <nav @click="show" class="cart-icon"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav> -->
-            <!--- CartIcon End -->
-
             <CartIcon /> 
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
