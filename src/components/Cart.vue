@@ -18,7 +18,6 @@
      <section id="cart">
          <span class=""></span>
         <h2>Din beställning</h2>
-        <CartItem v-for="(item, index) in cart" :key="index" :item="item" />
         <div class="total">
             <h3>Total<span class="dots"></span>{{total}} 49kr</h3>
             <div class="counter">
@@ -38,7 +37,7 @@
         name: "Cart",
 
         components: {
-            CartItem
+            
         }
     }
 </script>
