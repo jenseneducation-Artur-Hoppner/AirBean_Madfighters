@@ -7,8 +7,6 @@
             </nav>
         </div>
         <div class="column">
-
-
             <CartIcon /> 
 
         </div>

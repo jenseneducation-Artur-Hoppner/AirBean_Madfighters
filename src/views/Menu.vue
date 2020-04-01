@@ -56,7 +56,6 @@ export default {
 }
 
 /* layout */
-
 .item2 { grid-area: left;}
 .item3 { grid-area: main; }
 .item4 { grid-area: right; 
@@ -76,8 +75,8 @@ section {
     background: #F3E4E1;
     height: 100vh;
 }
-/* Typography */
 
+/* Typography */
 h1 {
     font-family: ' PT serif', "serif";
     font-size: 4rem;
@@ -90,6 +89,7 @@ h1 {
 font-size: 2em;
 font-weight: 700;
 font-family:' PT serif', "serif";
+padding-right: 3%;
 }
 
 /* spacing between menu items */
