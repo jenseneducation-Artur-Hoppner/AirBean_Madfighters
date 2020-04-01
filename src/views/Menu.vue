@@ -89,7 +89,7 @@ h1 {
 font-size: 2em;
 font-weight: 700;
 font-family:' PT serif', "serif";
-padding-right: 3%;
+margin-right: 10px;
 }
 
 /* spacing between menu items */
