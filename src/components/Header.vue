@@ -8,11 +8,9 @@
         </div>
         <div class="column">
 
-            <!-- CartIcon Start --> 
-            <!-- <nav @click="show" class="cart-icon"><aside class="counter">5</aside><img src="../assets/graphics/bag.svg" alt=""></nav> -->
-            <!--- CartIcon End -->
 
             <CartIcon /> 
+
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
         <Cart v-if="$store.state.showCart" />
@@ -20,6 +18,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Navigation from '../components/Navigation';
 import Cart from '../components/Cart';
 import CartIcon from '../components/CartIcon';
@@ -31,10 +30,16 @@ import CartIcon from '../components/CartIcon';
             Cart,
             CartIcon
         },
+        computed: {
+            ...mapGetters(['cartItemCount'])
+        },
+        // move mapgetter to cartIcon.vue
+
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
         },
+     
 
         show(){
             this.$store.commit('showCart')

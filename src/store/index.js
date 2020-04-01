@@ -16,31 +16,6 @@ export default new Vuex.Store({
     showMenu: false, // From Lova
     showCart: false // From Lova
   },
-
-
-  actions: {
-
-      // Importing from api/index.js and get menu
-      async getApiMenu({commit}) {
-        const data = await getMenu();
-        commit("addToMenu", data);
-        return true;
-      },
-
-      // Importing from api/index.js and post order
-      async getApiOrder({commit}) {
-        const data = await postOrder();
-        commit("addToOrder", data);
-        return true;
-      },
-      
-          // From Ade
-          addItem(context, item) {
-            context.commit("addToCart", item);
-          }
-          // ____________________________________
-  },
-
   mutations: {
     //Pass Api menu to state menu
     addToMenu: (state, data) => (state.menu = data),
@@ -79,8 +54,33 @@ export default new Vuex.Store({
 // ____________________________________
 },
 
+  actions: {
+
+      // Importing from api/index.js and get menu
+      async getApiMenu({commit}) {
+        const data = await getMenu();
+        commit("addToMenu", data);
+        return true;
+      },
+
+      // Importing from api/index.js and post order
+      async getApiOrder({commit}) {
+        const data = await postOrder();
+        commit("addToOrder", data);
+        return true;
+      },
+      
+          // From Ade
+          addItem(context, item) {
+            context.commit("addToCart", item);
+          }
+          // ____________________________________
+  },
 
   getters: {
+     cartItemCount: (state) => {
+      return state.cart.length;
+    },
       // From Ade
       total: state => {
         if (state.cart.length > 0) {
