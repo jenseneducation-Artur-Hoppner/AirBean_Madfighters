@@ -26,4 +26,7 @@ name: 'CartItem'
 
 <style lang='scss'>
 
+.cart-item {
+    background: #fff;
+}
 </style>

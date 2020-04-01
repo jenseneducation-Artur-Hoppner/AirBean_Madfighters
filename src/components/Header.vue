@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header v-on:keydown.esc="escapeOverlay">
         <div class="column">
             <nav class="btn-nav" @click="toggle">
                 <img id="nav-icon" v-if="$store.state.showMenu" src="../assets/graphics/close.svg" alt="">
@@ -45,6 +45,7 @@ import CartIcon from '../components/CartIcon';
             this.$store.commit('showCart')
             console.log("show ran ")
         }
+
         }
     }
 </script>
