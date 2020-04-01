@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+
 import Navigation from '../components/Navigation';
 import Cart from '../components/Cart';
 import CartIcon from '../components/CartIcon';
@@ -30,9 +30,7 @@ import CartIcon from '../components/CartIcon';
             Cart,
             CartIcon
         },
-        computed: {
-            ...mapGetters(['cartItemCount'])
-        },
+        
         // move mapgetter to cartIcon.vue
 
         methods: {
