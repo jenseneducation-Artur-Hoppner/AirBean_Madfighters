@@ -26,18 +26,15 @@
                <button class="arrow"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button></div>
             <p>Inkl moms + drönarleverans</p>
         </div>
-        <a href="#" class="btn" @click="sendOrder">Take my money</a>
+        <button href="#" class="btn" @click="sendOrder">Take my money</button>
     </section>
      </div>
 </template>
 
 <script>
-    import CartItem from '../components/CartItem';
     export default {
         name: "Cart",
-
         components: {
-            
         }
     }
 </script>
