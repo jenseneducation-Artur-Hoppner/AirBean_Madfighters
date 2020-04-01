@@ -57,6 +57,12 @@ export default new Vuex.Store({
     showCart(state) {
       state.showCart = !state.showCart
     },
+
+    hideCart(state) {
+      !state.showCart
+      console.log("hideCart() ran " . state.showCart  )
+
+    },
     //______________________________
 
     // From Ade
