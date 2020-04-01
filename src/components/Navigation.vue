@@ -14,7 +14,6 @@
 <script>
     export default {
         name: "Navigation",
-
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
@@ -25,8 +24,8 @@
 
 <style lang="scss" scoped>
     @import "./../assets/scss/variables";
-    /* NAVIGATION */
 
+    /* NAVIGATION */
     .border {
         height: 1px;
         width: 2rem;
@@ -37,7 +36,6 @@
         align-items: center;
         margin: auto;
     }
-
 
     .navigation {
         z-index: 999;
@@ -58,8 +56,6 @@
         font-size: 1.5em;
         color: white;
     }
-
-
 
     :root {
         color: #fff;

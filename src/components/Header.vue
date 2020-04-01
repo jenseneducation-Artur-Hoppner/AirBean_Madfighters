@@ -7,19 +7,20 @@
             </nav>
         </div>
         <div class="column">
-            <CartIcon /> 
-
+            <CartIcon />
         </div>
-      <Navigation v-if="$store.state.showMenu" /> 
+        <Navigation v-if="$store.state.showMenu" />
         <Cart v-if="$store.state.showCart" />
     </header>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Navigation from '../components/Navigation';
-import Cart from '../components/Cart';
-import CartIcon from '../components/CartIcon';
+    import {
+        mapGetters
+    } from 'vuex';
+    import Navigation from '../components/Navigation';
+    import Cart from '../components/Cart';
+    import CartIcon from '../components/CartIcon';
 
     export default {
         name: "Header",
@@ -36,19 +37,19 @@ import CartIcon from '../components/CartIcon';
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
-        },
-     
+            },
 
-        show(){
-            this.$store.commit('showCart')
-            console.log("show ran ")
-        }
+
+            show() {
+                this.$store.commit('showCart')
+                console.log("show ran ")
+            }
 
         }
     }
 </script>
 <style lang="scss" scoped>
-@import "./../assets/scss/variables";
+    @import "./../assets/scss/variables";
 
 
     :root {
@@ -101,22 +102,23 @@ import CartIcon from '../components/CartIcon';
 
     /* COUNTER ICON */
 
-.counter {
-    background:$orange;
-    width:1.2rem;
-    height:1.2rem;
-    border-radius: 50%;
-    position:absolute;
-    margin-left: 15px;
-    margin-top: 3px;
-    font-size: .6rem;
-    color:white;
-    font-weight: 700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+    .counter {
+        background: $orange;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 15px;
+        margin-top: 3px;
+        font-size: .6rem;
+        color: white;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     // /* NAVIGATION */
 
     // .border {
@@ -165,7 +167,7 @@ import CartIcon from '../components/CartIcon';
         cursor: pointer;
         transition: all 0.4s ease-in-out;
         border: none;
-        position:relative;
+        position: relative;
         margin-left: 10px;
         margin-top: 10px;
     }
