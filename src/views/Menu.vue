@@ -5,22 +5,12 @@
 
    <!-- Following should be inside a MenuItem component I guess???  ^_^   -->
    <div v-bind:menu="menu" v-for="menu in getMenuHere" :key="menu.id" class="container menu-item">
-      <!--- v-for goes here ^_^  --->
-      <div class="item2">
-        <button class="btn-menu">
-          <img id="menu-increase" src="../assets/graphics/plus.png" alt="">
-        </button>
-      </div>
-      <div class="item3 menu-heading">
-        {{menu.title}}
-      </div>
-      <div class="item4 menu-heading">
-        <span class="dots"> </span>
-        {{menu.price}}
-      </div>
-      <div class="item5 menu-sub-heading">
-        {{menu.desc}}
-      </div>
+
+      <div class="item2"><button class="btn-menu"><img id="menu-increase" src="../assets/graphics/plus.png" alt=""></button></div>
+      <div class="item3 menu-heading">{{menu.title}}</div>
+      <div class="item4 menu-heading"><span class="dots"> </span>{{menu.price}}</div>
+      <div class="item5 menu-sub-heading">{{menu.desc}}</div>
+
    </div>
 </section>
 </template>
@@ -53,7 +43,6 @@ export default {
      },
             toggle() {
                 this.$store.commit('toggleMenu');
-                console.log("toggle() ran")
             },
         }
 }

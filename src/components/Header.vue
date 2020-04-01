@@ -7,7 +7,10 @@
             </nav>
         </div>
         <div class="column">
-            <nav @click="show" class="btn-bag"><aside class="counter">{{ cartItemCount }}</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+
+
+            <CartIcon /> 
+
         </div>
       <Navigation v-if="$store.state.showMenu" /> 
         <Cart v-if="$store.state.showCart" />
@@ -18,21 +21,25 @@
 import { mapGetters } from 'vuex';
 import Navigation from '../components/Navigation';
 import Cart from '../components/Cart';
+import CartIcon from '../components/CartIcon';
 
     export default {
         name: "Header",
         components: {
             Navigation,
-            Cart
+            Cart,
+            CartIcon
         },
         computed: {
             ...mapGetters(['cartItemCount'])
         },
+        // move mapgetter to cartIcon.vue
 
         methods: {
             toggle() {
                 this.$store.commit('toggleMenu');
         },
+     
 
         show(){
             this.$store.commit('showCart')
@@ -74,9 +81,9 @@ import Cart from '../components/Cart';
         z-index: 1000;
     }
 
-    /* Bag icon */
+    /* Cart Icon */
 
-    .btn-bag {
+    .cart-icon {
         font-size: 4.42em;
         font-weight: 300;
         width: 45px;
