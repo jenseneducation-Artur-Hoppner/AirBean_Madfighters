@@ -9,8 +9,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    cartItems: [], // From Lova
-    cart: [1], // From Ade
+    //cartItems: [], // From Lova
+    cart: [], // From Ade
     menu: [],
     order: {}, // From Ade
     showMenu: false, // From Lova

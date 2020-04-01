@@ -1,15 +1,18 @@
 <template>
-    <nav @click="show" class="cart-icon"><aside class="counter">1</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+    <nav @click="show" class="cart-icon"><aside class="counter">{{cartItemCount}}</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+
 name: "CartIcon",
-
-
+computed: {
+            ...mapGetters(['cartItemCount'])
+        },
 
 methods: {
-
         show(){
             this.$store.commit('showCart')
             console.log("show ran ")
