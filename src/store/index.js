@@ -48,8 +48,8 @@ export default new Vuex.Store({
       let index = state.cart.findIndex(item => item.id === id);
       state.cart.splice(index, 1);
     },
-    updateItem(state, id) {
-      let index = state.cart.findIndex(item => item.id === id);
+    updateItem(state, item) {
+      let index = state.cart.findIndex(i => item === i.id);
       state.cart[index].quantity++;
     }
   
@@ -69,9 +69,13 @@ export default new Vuex.Store({
         return true;
       },
       
-          addItem(context, item) {
-
-            context.commit("addToCart", item);
+          addItem({commit, state}, item) {
+            let index = item.id
+            if(state.cart.find(i => i.id === item.id)) {
+              commit("updateItem", index);
+            }else{
+              commit("addToCart", item);
+            }
           }
 
  
