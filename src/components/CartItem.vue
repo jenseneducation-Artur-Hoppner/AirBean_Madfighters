@@ -1,5 +1,9 @@
 <template>
    <div class="container cart-item"> <!---  -->
+         <ul v-bind:cart="cart" v-for="cart in getCartHere" :key="cart.id">
+     <p>{{cart.title}}</p>
+     <p>{{cart.price}}</p>
+   </ul>
          <div class="main cart-heading">
             <p>CART ITEM </p>
             <p style="font-size: .5em;">CART ITEMS PRICE</p>
@@ -18,7 +22,14 @@
 
 export default {
 
-name: 'CartItem'
+name: 'CartItem',
+
+    computed: {
+
+           getCartHere(){
+      return this.$store.state.cart
+      },
+    },
 }
 
 </script>
