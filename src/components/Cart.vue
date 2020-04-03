@@ -20,7 +20,7 @@
          <span class=""></span>
         <h2>Din beställning</h2>
         <div class="total">
-            <h3>Total<span class="dots"></span>{{total}}</h3>
+            <h3>Total<span class="dots"></span>{{total}}kr</h3>
             <div class="counter">
            <button class="arrow"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
                <p style="font-size: .5em;" class="counter">1</p>
