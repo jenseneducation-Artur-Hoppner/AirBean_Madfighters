@@ -6,7 +6,7 @@
    <!-- Following should be inside a MenuItem component I guess???  ^_^   -->
    <div v-bind:menu="menu" v-for="menu in getMenuHere" :key="menu.id" class="container menu-item">
 
-      <div class="item2"><button class="btn-menu"><img id="menu-increase" src="../assets/graphics/plus.png" alt=""></button></div>
+      <div class="item2"><button class="btn-menu" @click="addToCart(menu)"><img id="menu-increase" src="../assets/graphics/plus.png" alt=""></button></div>
       <div class="item3 menu-heading">{{menu.title}}</div>
       <div class="item4 menu-heading"><span class="dots"> </span>{{menu.price}}</div>
       <div class="item5 menu-sub-heading">{{menu.desc}}</div>
@@ -38,8 +38,8 @@ export default {
   },
   
    methods: {
-     addToCart() {
-       this.$store.dispatch('addItem')
+     addToCart(menu) {
+       this.$store.dispatch('addItem', menu)
      },
             toggle() {
                 this.$store.commit('toggleMenu');
