@@ -10,8 +10,8 @@
       <div class="item3 menu-heading">{{menu.title}}</div>
       <div class="item4 menu-heading"><span class="dots"> </span>{{menu.price}}</div>
       <div class="item5 menu-sub-heading">{{menu.desc}}</div>
-
    </div>
+     <Footer /> 
 
 </section>
 </template>
@@ -19,9 +19,11 @@
 <script>
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 export default {
   components: {
-    Header
+    Header,
+    Footer
   },
 
  data: () => ({
