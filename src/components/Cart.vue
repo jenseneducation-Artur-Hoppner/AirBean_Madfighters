@@ -15,6 +15,7 @@
     </section> -->
 
 <div class="overlay">
+    <cartItem/>
      <section id="cart">
          <span class=""></span>
         <h2>Din beställning</h2>
@@ -35,12 +36,16 @@
 import { mapGetters } from 'vuex';
 
     export default {
+    components: {
+    cartItem
+    
+    },
         name: "Cart",
-        components: {
-        },
+
         computed: {
             ...mapGetters(['total'])
         },
+
     }
 </script>
 
