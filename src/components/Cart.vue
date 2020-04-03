@@ -75,9 +75,13 @@ h2 {
     bottom: 0;
     z-index: 1000;
 
-    h2 {
-        font-size: 2em;
+h2 {
+    font-size: 2.2em;
+}
+
+    h2, h3 {
         font-weight: 700;
+        font-family: 'PT Serif', serif;
     }
 }
 
@@ -91,7 +95,6 @@ h2 {
             margin: 0;
             display: flex;
             font-size: 2em;
-            font-family: 'PT Serif', serif;
             font-weight: 700;
 
             .dots {

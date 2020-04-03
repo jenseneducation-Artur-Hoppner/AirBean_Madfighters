@@ -1,22 +1,23 @@
 <template>
-   <div class="cart-item" > <!---  -->
-     <section v-for="cart in getCartHere" :key="cart.id"> 
-     <p class="item">{{cart.title}}
-     <span class="dots"></span> *
-     </p>
-     <p class="price"> {{cart.price}}kr </p>
-    
-   
-   
-         <div class="main cart-heading">
+   <div class="cart-item" >
+      <!---  -->
+      <section v-for="cart in getCartHere" :key="cart.id">
+         <p class="item">{{cart.title}}<span class="dots"></span>
+            <span>
+               <button class="buttons"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
+                  <p style="font-size: .5em;" class="counter">1</p>
+                     <button class="buttons"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button>
+               </span>
+         </p>
+            <p class="price"> {{cart.price}}kr </p>
+               <div class="main cart-heading">
          </div>
          <div class=" cart-heading">
             <div>
-           
             </div>
          </div>
-         </section>
-      </div>
+      </section>
+   </div>
 </template>
 <script>
 
@@ -32,6 +33,21 @@ name: 'CartItem',
 </script>
 
 <style lang='scss' scoped>
+
+.buttons {
+    display:flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+   .counter {
+      display:flex;
+       flex-direction: column;
+      align-items: center; 
+      font-weight: 700;
+    }
+
+
 .cart-item {
         display: flex;
         flex-direction: column;
