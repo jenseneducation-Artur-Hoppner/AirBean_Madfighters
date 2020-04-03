@@ -20,7 +20,7 @@
          <span class=""></span>
         <h2>Din beställning</h2>
         <div class="total">
-            <h3>Total<span class="dots"></span>{{total}} 49kr</h3>
+            <h3>Total<span class="dots"></span>{{total}}</h3>
             <div class="counter">
            <button class="arrow"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
                <p style="font-size: .5em;" class="counter">1</p>
@@ -32,9 +32,8 @@
      </div>
 </template>
 
-
 <script>
-import cartItem from '../components/CartItem.vue';
+import { mapGetters } from 'vuex';
 
     export default {
     components: {
@@ -42,7 +41,11 @@ import cartItem from '../components/CartItem.vue';
     
     },
         name: "Cart",
-        
+
+        computed: {
+            ...mapGetters(['total'])
+        },
+
     }
 </script>
 
