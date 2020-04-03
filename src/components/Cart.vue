@@ -9,7 +9,7 @@
             <h3>Total<span class="dots"></span>{{total}}kr</h3>
             <p>Inkl moms + drönarleverans</p>
         </div>
-        <button href="#" class="btn" @click="sendOrder">Take my money</button>
+        <router-link to="/OrderStatus" tag="span"><button href="#" class="btn" @click="sendOrder">Take my money!</button></router-link>
     </section>
      </div>
 </template>
@@ -108,13 +108,13 @@ h2 {
     .btn {
      background: black;
      color: #fff;
-     padding:2%;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 2%;
-    width:40%;
+     padding:2%;  
+    border-radius: 30px;
+    width: 100%;
+    height: 30%;
+    font-size: 1.8em;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
     
     }
     
