@@ -12,6 +12,7 @@
       <div class="item5 menu-sub-heading">{{menu.desc}}</div>
 
    </div>
+
 </section>
 </template>
 
@@ -31,9 +32,7 @@ export default {
       getMenuHere(){
       return this.$store.state.menu
       },
-           getCartHere(){
-      return this.$store.state.cart
-      },
+
     },
 
   created() {
@@ -44,10 +43,10 @@ export default {
      addToCart(menu) {
        this.$store.dispatch('addItem', menu)
      },
-            toggle() {
-                this.$store.commit('toggleMenu');
+       toggle() {
+        this.$store.commit('toggleMenu');
             },
-        }
+      }
 }
 
 </script>
@@ -76,7 +75,7 @@ text-align: right;}
 section {
     max-width: 900px;
     background: #F3E4E1;
-    height: 100vh;
+    height: 100%;
 }
 
 /* Typography */

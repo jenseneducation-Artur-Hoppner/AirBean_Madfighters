@@ -15,6 +15,7 @@
     </section> -->
 
 <div class="overlay">
+    <cartItem/>
      <section id="cart">
          <span class=""></span>
         <h2>Din beställning</h2>
@@ -31,11 +32,17 @@
      </div>
 </template>
 
+
 <script>
+import cartItem from '../components/CartItem.vue';
+
     export default {
+    components: {
+    cartItem
+    
+    },
         name: "Cart",
-        components: {
-        }
+        
     }
 </script>
 

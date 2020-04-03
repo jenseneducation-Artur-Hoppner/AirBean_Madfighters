@@ -38,7 +38,7 @@ export default new Vuex.Store({
     addToCart(state, item) {
       
       state.cart.push({
-        id: item.id,
+        id: item.id , //getting duplicate error
         price: item.price,
         title: item.title,
         quantity: 1
@@ -70,10 +70,21 @@ export default new Vuex.Store({
       },
       
           addItem(context, item) {
+
             context.commit("addToCart", item);
           }
-          // ____________________________________
-  },
+
+ 
+          // addItem({context, state}, item) {
+          //   let index = find(state.cart, ['id', item.id]);
+          //   if(index >= 0){
+          //   context.commit("updateItem", index);
+          // } else {
+          //   context.commit("addToCart", item);
+          // }
+          // } 
+          
+        },
 
   getters: {
      cartItemCount: (state) => {
