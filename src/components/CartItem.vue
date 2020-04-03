@@ -1,31 +1,28 @@
 <template>
-   <div class="container cart-item"> <!---  -->
-         <ul v-bind:cart="cart" v-for="cart in getCartHere" :key="cart.id">
-     <p>{{cart.title}}</p>
-     <p>{{cart.price}}</p>
-   </ul>
+   <div class="cart-item" > <!---  -->
+     <section v-for="cart in getCartHere" :key="cart.id"> 
+     <p class="item">{{cart.title}}
+     <span class="dots"></span> *
+     </p>
+     <p class="price"> {{cart.price}}kr </p>
+    
+   
+   
          <div class="main cart-heading">
-            <p>CART ITEM </p>
-            <p style="font-size: .5em;">CART ITEMS PRICE</p>
          </div>
          <div class=" cart-heading">
-            <div class="right">
-               <button><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
-               <p style="font-size: .5em;"></p>
-               <button>
-               <img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button>
+            <div>
+           
             </div>
          </div>
+         </section>
       </div>
 </template>
 <script>
 
 export default {
-
 name: 'CartItem',
-
     computed: {
-
            getCartHere(){
       return this.$store.state.cart
       },
@@ -34,9 +31,38 @@ name: 'CartItem',
 
 </script>
 
-<style lang='scss'>
-
+<style lang='scss' scoped>
 .cart-item {
-    background: #fff;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0;
+
+        p {
+            margin: 0;
+            display: flex;
+
+            .dots {
+                flex: 1;
+                border-bottom: 1px dotted rgba(0,0,0,.2);
+                margin: 0 .3rem .3rem 0;
+            }
+        }
+    }
+
+
+.item {
+   font-size: 1.6em;
+   font-family: 'PT Serif', serif;
+   font-weight: 700;
 }
+.price {
+   font-size: 1em;
+   font-family: 'Work Sans', sans-serif;
+}
+
+
+// .total {
+//    flex: 1;
+// }
+
 </style>

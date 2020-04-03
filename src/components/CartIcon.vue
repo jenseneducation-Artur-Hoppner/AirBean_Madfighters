@@ -26,7 +26,7 @@ methods: {
 @import "./../assets/scss/variables";
 
 .cart-icon {
-    z-index: 2001;
+    z-index: 2000;
     position: relative;
 }
 
