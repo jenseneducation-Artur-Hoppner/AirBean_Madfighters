@@ -33,11 +33,12 @@
 </template>
 
 <script>
+import CartItem from './CartItem.vue';
 import { mapGetters } from 'vuex';
 
     export default {
     components: {
-    cartItem
+    CartItem
     
     },
         name: "Cart",
