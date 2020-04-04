@@ -51,6 +51,12 @@ export default new Vuex.Store({
     updateItem(state, item) {
       let index = state.cart.findIndex(i => item === i.id);
       state.cart[index].quantity++;
+    },
+    decrementItem(state, item) {
+      let index = state.cart.findIndex(i => item === i.id);
+      state.cart[index].quantity--;
+      //If cart quantity = 0 splice
+      //else state.cart[index].quantity--
     }
   
   },

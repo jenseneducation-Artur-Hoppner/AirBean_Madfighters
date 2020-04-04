@@ -4,7 +4,7 @@
       <section v-for="cart in getCartHere" :key="cart.id">
          <p class="item">{{cart.title}}<span class="dots"></span>
             <span>
-               <button class="buttons"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
+               <button class="buttons" @click="addProduct(cart)" ><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
                   <p style="font-size: .5em;" class="counter">{{cart.quantity}}</p>
                      <button class="buttons"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button>
                </span>
@@ -28,6 +28,12 @@ name: 'CartItem',
       return this.$store.state.cart
       },
     },
+       methods: {
+     addProduct(cart) {
+       this.$store.dispatch('addItem', cart)
+     },
+
+      }
 }
 
 </script>
