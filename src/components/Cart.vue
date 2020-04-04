@@ -5,7 +5,6 @@
         <h2>Din beställning</h2>
          <CartItem/>
         <div class="total">
-            
             <h3>Total<span class="dots"></span>{{total}}kr</h3>
             <p>Inkl moms + drönarleverans</p>
         </div>

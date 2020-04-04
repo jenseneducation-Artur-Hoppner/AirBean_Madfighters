@@ -70,10 +70,8 @@ export default new Vuex.Store({
         let index = item.id
         if(state.cart.find(i => i.id === item.id)) {
           commit("updateItem", index);
-          console.log("ADDITEM "  . index)
         }else{
           commit("addToCart", item);
-          console.log("item är " . item)
         }
       }
 
