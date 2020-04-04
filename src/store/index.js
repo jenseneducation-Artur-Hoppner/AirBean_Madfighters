@@ -20,7 +20,6 @@ export default new Vuex.Store({
     addToOrder: (state, data) => (state.order = data),
 
     toggleMenu(state) {
-      console.log(state.showMenu);
       state.showMenu = !state.showMenu
     },
 
@@ -30,8 +29,6 @@ export default new Vuex.Store({
 
     hideCart(state) {
       !state.showCart
-      console.log("hideCart() ran " . state.showCart  )
-
     },
 
     
@@ -50,9 +47,9 @@ export default new Vuex.Store({
     },
     updateItem(state, id) {
       let index = state.cart.findIndex(item => item.id === id);
+      console.log( "updateItem ran " . item)
       state.cart[index].quantity++;
     }
-  
   },
 
   actions: {
@@ -69,10 +66,16 @@ export default new Vuex.Store({
         return true;
       },
       
-          addItem(context, item) {
-
-            context.commit("addToCart", item);
-          }
+      addItem({commit, state}, item) {
+        let index = item.id
+        if(state.cart.find(i => i.id === item.id)) {
+          commit("updateItem", index);
+          console.log("ADDITEM "  . index)
+        }else{
+          commit("addToCart", item);
+          console.log("item är " . item)
+        }
+      }
 
  
           // addItem({context, state}, item) {

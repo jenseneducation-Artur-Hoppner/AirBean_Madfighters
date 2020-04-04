@@ -21,10 +21,8 @@ import { mapGetters } from 'vuex';
     export default {
     components: {
     CartItem
-    
     },
         name: "Cart",
-
         computed: {
             ...mapGetters(['total'])
         },
@@ -118,6 +116,7 @@ h2 {
     font-size: 1.8em;
     font-family: 'PT Serif', serif;
     font-weight: 700;
+    cursor: pointer;
     
     }
     

@@ -4,12 +4,12 @@
       <section v-for="cart in getCartHere" :key="cart.id">
          <p class="item">{{cart.title}}<span class="dots"></span>
             <span>
-               <button class="buttons"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
+               <button class="buttons" @click="increase" ><img src="@/assets/graphics/arrow-up.svg" alt="increase-button"></button>
                   <p style="font-size: .5em;" class="counter">1</p>
-                     <button class="buttons"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button>
+                     <button class="buttons"><img src="@/assets/graphics/arrow-down.svg" alt="decrease-button"></button>
                </span>
          </p>
-            <p class="price"> {{cart.price}}kr </p>
+            <p class="price"> {{cart.price * cart.quantity}}kr </p>
                <div class="main cart-heading">
          </div>
          <div class=" cart-heading">
@@ -27,6 +27,15 @@ name: 'CartItem',
            getCartHere(){
       return this.$store.state.cart
       },
+
+      methods: {
+         increase() {
+            console.log("Increase ran")
+         },
+         decrease() {
+            console.log("Decrease ran")
+         }
+      }
     },
 }
 
@@ -38,25 +47,23 @@ name: 'CartItem',
     display:flex;
     flex-direction: column;
     align-items: center;   
+    cursor: pointer;
 }
-
    .counter {
       display:flex;
-       flex-direction: column;
+      flex-direction: column;
       align-items: center; 
       font-weight: 700;
     }
-
 
 .cart-item {
         display: flex;
         flex-direction: column;
         margin: 2rem 0;
-
         p {
             margin: 0;
             display: flex;
-
+            cursor: default;
             .dots {
                 flex: 1;
                 border-bottom: 1px dotted rgba(0,0,0,.2);
@@ -65,20 +72,15 @@ name: 'CartItem',
         }
     }
 
-
 .item {
    font-size: 1.6em;
    font-family: 'PT Serif', serif;
    font-weight: 700;
+   line-height: 1.5;
 }
 .price {
    font-size: 1em;
    font-family: 'Work Sans', sans-serif;
 }
-
-
-// .total {
-//    flex: 1;
-// }
 
 </style>

@@ -72,10 +72,11 @@ text-align: right;}
     'left main main main right right'
     'left sub sub sub sub sub';
   grid-gap: 10px;
+  max-width: 500px;
 }
 
 section {
-    max-width: 900px;
+    /* max-width: 900px; */
     background: #F3E4E1;
     height: 100%;
 }
