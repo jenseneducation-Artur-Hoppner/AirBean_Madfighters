@@ -5,8 +5,11 @@
         <h2>Din beställning</h2>
          <CartItem/>
         <div class="total">
-            
             <h3>Total<span class="dots"></span>{{total}}kr</h3>
+            <div class="counter">
+           <button class="arrow"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
+               <p style="font-size: .5em;" class="counter">1</p>
+               <button class="arrow"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button></div>
             <p>Inkl moms + drönarleverans</p>
         </div>
         <router-link to="/OrderStatus" tag="span"><button href="#" class="btn" @click="sendOrder">Take my money!</button></router-link>
