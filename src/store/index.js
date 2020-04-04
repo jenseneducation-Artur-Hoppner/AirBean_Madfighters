@@ -45,14 +45,8 @@ export default new Vuex.Store({
       let index = state.cart.findIndex(item => item.id === id);
       state.cart.splice(index, 1);
     },
-<<<<<<< HEAD
-    updateItem(state, id) {
-      let index = state.cart.findIndex(item => item.id === id);
-      console.log( "updateItem ran " . item)
-=======
     updateItem(state, item) {
       let index = state.cart.findIndex(i => item === i.id);
->>>>>>> e908296c420160d4ef7e89aa5d884964b66f1096
       state.cart[index].quantity++;
     }
   },
@@ -71,16 +65,6 @@ export default new Vuex.Store({
         return true;
       },
       
-<<<<<<< HEAD
-      addItem({commit, state}, item) {
-        let index = item.id
-        if(state.cart.find(i => i.id === item.id)) {
-          commit("updateItem", index);
-        }else{
-          commit("addToCart", item);
-        }
-      }
-=======
           addItem({commit, state}, item) {
             let index = item.id
             if(state.cart.find(i => i.id === item.id)) {
@@ -89,7 +73,6 @@ export default new Vuex.Store({
               commit("addToCart", item);
             }
           }
->>>>>>> e908296c420160d4ef7e89aa5d884964b66f1096
 
  
           // addItem({context, state}, item) {
