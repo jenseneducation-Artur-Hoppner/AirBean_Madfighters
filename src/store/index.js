@@ -91,20 +91,31 @@ export default new Vuex.Store({
         },
 
   getters: {
-     cartItemCount: (state) => {
-      return state.cart.length;
+
+    totalPrice: state => {
+      let total = 0
+      state.cart.forEach((cart)  => {
+        
+          total += cart.price * cart.quantity
+         
+
+      });
+      
+      return total
     },
 
-    total: state => {
-        if (state.cart.length > 0) {
-          return state.cart
-            .map(item => item.price)
-            .reduce((total, amount) => total + amount);
-        } else {
-          return 0;
-        }
-      }
+    cartItem: state => {
+      let total = 0
+      state.cart.forEach((cart)  => {
+        
+          total += cart.quantity
+         
 
+      });
+      
+      return total
+    },
+    
   },
 
 

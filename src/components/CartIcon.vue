@@ -1,5 +1,5 @@
 <template>
-    <nav @click="show" class="cart-icon"><aside class="counter">{{cartItemCount}}</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+    <nav @click="show" class="cart-icon"><aside class="counter">{{cartItem}}</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
 
 name: "CartIcon",
 computed: {
-            ...mapGetters(['cartItemCount'])
+            ...mapGetters(['cartItem'])
         },
 
 methods: {

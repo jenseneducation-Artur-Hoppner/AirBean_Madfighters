@@ -5,11 +5,11 @@
          <p class="item">{{cart.title}}<span class="dots"></span>
             <span>
                <button class="buttons"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
-                  <p style="font-size: .5em;" class="counter">1</p>
+                  <p style="font-size: .5em;" class="counter">{{cart.quantity}}</p>
                      <button class="buttons"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button>
                </span>
          </p>
-            <p class="price"> {{cart.price}}kr </p>
+            <p class="price"> {{cart.price * cart.quantity}}kr </p>
                <div class="main cart-heading">
          </div>
          <div class=" cart-heading">
