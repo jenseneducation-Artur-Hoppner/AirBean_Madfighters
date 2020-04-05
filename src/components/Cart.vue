@@ -10,7 +10,19 @@
         </div>
             <p>Inkl moms + drönarleverans</p>
         </div>
-        <router-link to="/OrderStatus" tag="span"><button href="#" class="btn">Take my money!</button></router-link>
+       
+        <router-link  
+        to="/OrderStatus" 
+        tag="span"
+        v-if="totalPrice > 0"
+        ><button href="#" class="btn">Take my money!</button></router-link>
+
+        <button 
+        v-else
+         href="#" class="btn" 
+         @click="error = true">Take my money!</button>
+        
+            <div class="error-msg" v-if="error">Kundvagnen är tom</div>
     </section>
      </div>
 </template>
@@ -22,13 +34,16 @@ import { mapGetters } from 'vuex';
     export default {
     components: {
     CartItem
-    
     },
         name: "Cart",
-
         computed: {
             ...mapGetters(['totalPrice'])
         },
+ data: () => ({
+     error: false
+
+    })
+ 
 
     }
 </script>
@@ -105,10 +120,6 @@ h2 {
             }
         }
     }
-
-    
-
-
     .btn {
      background: black;
      color: #fff;
@@ -119,7 +130,12 @@ h2 {
     font-size: 1.8em;
     font-family: 'PT Serif', serif;
     font-weight: 700;
-    
+    cursor: pointer;
+    }
+
+    .error-msg {
+        text-align: center;
+        padding:2%;
     }
     
 </style>

@@ -76,7 +76,7 @@ p {
 .wrapper {
     background: $pink;
     height:100vh;
-    max-width: 1200px;
+    // max-width: 1200px;
 }
 
 article {

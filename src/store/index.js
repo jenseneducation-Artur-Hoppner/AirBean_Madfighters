@@ -20,7 +20,6 @@ export default new Vuex.Store({
     addToOrder: (state, data) => (state.order = data),
 
     toggleMenu(state) {
-      console.log(state.showMenu);
       state.showMenu = !state.showMenu
     },
 
@@ -30,8 +29,6 @@ export default new Vuex.Store({
 
     hideCart(state) {
       !state.showCart
-      console.log("hideCart() ran " . state.showCart  )
-
     },
 
     

@@ -27,11 +27,10 @@ name: 'CartItem',
     computed: {
            getCartHere(){
       return this.$store.state.cart
-      },
+      }
     },
     methods: {
-      ...mapMutations(['updateItem', 'removeCount'])
-      
+      ...mapMutations(['updateItem', 'removeCount']) // <3 
     },
 }
 
@@ -43,25 +42,23 @@ name: 'CartItem',
     display:flex;
     flex-direction: column;
     align-items: center;   
+    cursor: pointer;
 }
-
    .counter {
       display:flex;
-       flex-direction: column;
+      flex-direction: column;
       align-items: center; 
       font-weight: 700;
     }
-
 
 .cart-item {
         display: flex;
         flex-direction: column;
         margin: 2rem 0;
-
         p {
             margin: 0;
             display: flex;
-
+            cursor: default;
             .dots {
                 flex: 1;
                 border-bottom: 1px dotted rgba(0,0,0,.2);
@@ -70,20 +67,15 @@ name: 'CartItem',
         }
     }
 
-
 .item {
    font-size: 1.6em;
    font-family: 'PT Serif', serif;
    font-weight: 700;
+   line-height: 1.5;
 }
 .price {
    font-size: 1em;
    font-family: 'Work Sans', sans-serif;
 }
-
-
-// .total {
-//    flex: 1;
-// }
 
 </style>
