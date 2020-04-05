@@ -17,10 +17,9 @@ export default {
       return this.$store.state.order;
     }
   },
-  //_______________
+  
     created() {
         this.$store.dispatch("getApiOrder");
-
 }
 }
 </script>
@@ -48,7 +47,6 @@ p {
     margin: 16px 0;
     font-size: 1em;
 }
-
 
 #order-heading{
     font-family: 'playfair display';

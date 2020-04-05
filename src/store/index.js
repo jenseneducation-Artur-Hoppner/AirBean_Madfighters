@@ -48,7 +48,15 @@ export default new Vuex.Store({
     updateItem(state, item) {
       let index = state.cart.findIndex(i => item === i.id);
       state.cart[index].quantity++;
-    }
+    },
+    removeCount(state, id) {
+      let index = state.cart.findIndex(item => item.id === id);
+      state.cart[index].quantity--;
+      if (state.cart[index].quantity == 0) {
+        state.cart.splice(index, 1);
+      }
+    },
+  
   },
 
   actions: {

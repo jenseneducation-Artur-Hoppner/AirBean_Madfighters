@@ -1,7 +1,7 @@
 <template>
     <header v-on:keydown.esc="escapeOverlay">
         <div class="column">
-            <nav class="btn-nav" @click="toggle">
+            <nav class="btn-nav" @click="toggleMenu">
                 <img id="nav-icon" v-if="$store.state.showMenu" src="../assets/graphics/close.svg" alt="">
                 <img id="nav-icon" v-if="!$store.state.showMenu" src="../assets/graphics/open-menu.svg" alt="">
             </nav>
@@ -20,6 +20,7 @@
 import Navigation from '../components/Navigation';
 import Cart from '../components/Cart';
 import CartIcon from '../components/CartIcon';
+import { mapMutations } from 'vuex';
 
     export default {
         name: "Header",
@@ -32,9 +33,10 @@ import CartIcon from '../components/CartIcon';
         // move mapgetter to cartIcon.vue
 
         methods: {
-            toggle() {
-                this.$store.commit('toggleMenu');
-        },
+            //toggleMenu() {
+                //this.$store.commit('toggleMenu');
+                ...mapMutations([ 'toggleMenu' ]),
+        //},
      
 
         show(){
