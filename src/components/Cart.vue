@@ -5,7 +5,9 @@
         <h2>Din beställning</h2>
          <CartItem/>
         <div class="total">
-            <h3>Total<span class="dots"></span>{{total}}kr</h3>
+            <h3>Total<span class="dots"></span>{{totalPrice}}kr</h3>
+            <div class="counter">
+        </div>
             <p>Inkl moms + drönarleverans</p>
         </div>
         <router-link to="/OrderStatus" tag="span"><button href="#" class="btn" @click="sendOrder">Take my money!</button></router-link>
@@ -23,7 +25,7 @@ import { mapGetters } from 'vuex';
     },
         name: "Cart",
         computed: {
-            ...mapGetters(['total'])
+            ...mapGetters(['totalPrice'])
         },
 
     }

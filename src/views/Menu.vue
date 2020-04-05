@@ -4,7 +4,7 @@
    <h1>Meny</h1>
 
    <!-- Following should be inside a MenuItem component I guess???  ^_^   -->
-   <div v-bind:menu="menu" v-for="menu in getMenuHere" :key="menu.id" class="container menu-item">
+   <div v-for="menu in getMenuHere" :key="menu.id" class="container menu-item">
 
       <div class="item2"><button class="btn-menu" @click="addToCart(menu)" ><img id="menu-increase" src="../assets/graphics/plus.png" alt=""></button></div>
       <div class="item3 menu-heading">{{menu.title}}</div>
