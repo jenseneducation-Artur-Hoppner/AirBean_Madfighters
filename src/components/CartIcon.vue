@@ -1,9 +1,9 @@
 <template>
-    <nav @click="show" class="cart-icon"><aside class="counter">{{cartItem}}</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
+    <nav @click="showCart" class="cart-icon"><aside class="counter">{{cartItem}}</aside><img src="../assets/graphics/bag.svg" alt=""></nav>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 
 export default {
 
@@ -13,10 +13,11 @@ computed: {
         },
 
 methods: {
-        show(){
+        /*show(){
             this.$store.commit('showCart')
             console.log("show ran ")
-        }
+        }*/
+        ...mapMutations([ 'showCart'])
 }
 
 }

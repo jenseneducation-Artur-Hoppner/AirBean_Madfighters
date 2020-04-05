@@ -4,9 +4,9 @@
       <section v-for="cart in getCartHere" :key="cart.id">
          <p class="item">{{cart.title}}<span class="dots"></span>
             <span>
-               <button class="buttons"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
+               <button class="buttons" @click="updateItem(cart.id)"><img src="@/assets/graphics/arrow-up.svg" alt="arrow-up"></button>
                   <p style="font-size: .5em;" class="counter">{{cart.quantity}}</p>
-                     <button class="buttons"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button>
+                     <button class="buttons" @click="removeCount(cart.id)"><img src="@/assets/graphics/arrow-down.svg" alt="arrow-up"></button>
                </span>
          </p>
             <p class="price"> {{cart.price * cart.quantity}}kr </p>
@@ -20,6 +20,7 @@
    </div>
 </template>
 <script>
+import { mapMutations } from 'vuex';
 
 export default {
 name: 'CartItem',
@@ -27,6 +28,10 @@ name: 'CartItem',
            getCartHere(){
       return this.$store.state.cart
       },
+    },
+    methods: {
+      ...mapMutations(['updateItem', 'removeCount'])
+      
     },
 }
 
