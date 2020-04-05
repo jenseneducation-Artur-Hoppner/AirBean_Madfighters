@@ -10,7 +10,7 @@
         </div>
             <p>Inkl moms + drönarleverans</p>
         </div>
-        <router-link to="/OrderStatus" tag="span"><button href="#" class="btn" @click="sendOrder">Take my money!</button></router-link>
+        <router-link to="/OrderStatus" tag="span"><button href="#" class="btn">Take my money!</button></router-link>
     </section>
      </div>
 </template>
