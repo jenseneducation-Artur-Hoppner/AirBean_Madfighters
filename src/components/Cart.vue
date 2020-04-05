@@ -1,30 +1,22 @@
 <template>
-<div class="overlay">
-     <section id="cart">
-         <span class=""></span>
-        <h2>Din beställning</h2>
-         <CartItem/>
-        <div class="total">
-            <h3>Total<span class="dots"></span>{{totalPrice}}kr</h3>
-            <div class="counter">
-        </div>
-            <p>Inkl moms + drönarleverans</p>
-        </div>
-       
-        <router-link  
-        to="/OrderStatus" 
-        tag="span"
-        v-if="totalPrice > 0"
-        ><button href="#" class="btn">Take my money!</button></router-link>
-
-        <button 
-        v-else
-         href="#" class="btn" 
-         @click="error = true">Take my money!</button>
-        
+    <div class="overlay">
+        <section id="cart">
+            <span class=""></span>
+            <h2>Din beställning</h2>
+            <CartItem/>
+            <div class="total">
+                <h3>Total<span class="dots"></span>{{totalPrice}}kr</h3>
+                <div class="counter">
+                </div>
+                <p>Inkl moms + drönarleverans</p>
+            </div>
+            <router-link to="/OrderStatus" tag="span" v-if="totalPrice > 0">
+                <button href="#" class="btn">Take my money!</button>
+            </router-link>
+            <button v-else href="#" class="btn" @click="error = true">Take my money!</button>
             <div class="error-msg" v-if="error">Kundvagnen är tom</div>
-    </section>
-     </div>
+        </section>
+    </div>
 </template>
 
 <script>
@@ -41,7 +33,6 @@ import { mapGetters } from 'vuex';
         },
  data: () => ({
      error: false
-
     })
  
 
