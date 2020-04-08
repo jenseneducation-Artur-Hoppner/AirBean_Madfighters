@@ -56,6 +56,9 @@ export default new Vuex.Store({
         state.cart.splice(index, 1);
       }
     },
+    clearCart(state) {
+      state.cart=[];
+    }
   
   },
 
@@ -80,7 +83,7 @@ export default new Vuex.Store({
             }else{
               commit("addToCart", item);
             }
-          }
+          },
 
  
           // addItem({context, state}, item) {

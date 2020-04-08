@@ -4,11 +4,14 @@
     <img class="drone" src="../assets/graphics/drone.svg" alt="drone">
     <h1 id="order-heading">Din beställning är på väg!</h1>
     <p id="ETA">{{order.eta}} minuter</p>
-    <button class="btn">Ok, cool!</button>
+    <router-link to="/">
+    <button class="btn" @click="clearCart">Ok, cool!</button>
+    </router-link>
 </main>
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 export default {
         // From Ade ????
   name: "OrderStatus",
@@ -17,6 +20,9 @@ export default {
       return this.$store.state.order;
     }
   },
+  methods: {
+           ...mapMutations(['clearCart'])
+        },
   
     created() {
         this.$store.dispatch("getApiOrder");
