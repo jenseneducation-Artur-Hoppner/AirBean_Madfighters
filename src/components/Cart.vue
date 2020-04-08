@@ -31,6 +31,7 @@ import { mapGetters } from 'vuex';
         computed: {
             ...mapGetters(['totalPrice'])
         },
+        
  data: () => ({
      error: false
     })
